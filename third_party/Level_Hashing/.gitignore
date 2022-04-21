@@ -50,3 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+compile_commands.json
+persistent_level_hashing/reader
+persistent_level_hashing/writer
