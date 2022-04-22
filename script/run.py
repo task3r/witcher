@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import sys
 import os
 import datetime
 from tasks import tasks
@@ -40,9 +41,12 @@ def run(app_name, path):
 
     print(app_name + " ends.")
 
-def main():
+def run_all():
     for name, path in tasks.items():
         run(name, path)
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) == 3:
+        run(sys.argv[1], sys.argv[2])
+    else:
+        run_all()

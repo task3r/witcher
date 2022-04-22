@@ -7,14 +7,14 @@ INCLUDE_DIR=$WITCHER_HOME/pmdk-1.8/src/include
 
 cd $LIBPMEM_DIR
 make -j16
-sudo make install NDCTL_ENABLE=n prefix=/usr
+make install NDCTL_ENABLE=n prefix=/usr
 
 cd $LIBPMEMOBJ_DIR
 make -j16
-sudo make install NDCTL_ENABLE=n prefix=/usr
+make install NDCTL_ENABLE=n prefix=/usr
 
 cd $INCLUDE_DIR
-sudo cp -r libpmemblk.h libpmem.h libpmemlog.h libpmemobj.h libpmempool.h libpmemobj /usr/include/
+cp -r libpmemblk.h libpmem.h libpmemlog.h libpmemobj.h libpmempool.h libpmemobj /usr/include/
 
 cd $CURR_DIR
 cp $LIBPMEMOBJ_DIR/*.bc .

@@ -1,6 +1,6 @@
 ########################### User defined variables ###########################
 NAME ?= main
-DEBUGFLAGS ?= -debug
+DEBUGFLAGS ?=
 OBJ_FILES ?=
 COV_FILES ?=
 
