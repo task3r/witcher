@@ -5,7 +5,7 @@ SHELL ["/bin/bash", "-c"]
 
 RUN apt update && apt install -y cmake gcc make git python3-pip autoconf \
     automake psmisc libtbb-dev libjemalloc-dev libboost-all-dev libpapi-dev \
-    libjpeg-dev wget software-properties-common asciidoctor
+    libjpeg-dev wget software-properties-common asciidoctor time
 RUN pip3 install pymemcache redis matplotlib networkx
 RUN wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
 RUN apt-add-repository "deb http://apt.llvm.org/bionic llvm-toolchain-bionic-9 main"

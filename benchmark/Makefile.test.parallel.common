@@ -1,6 +1,6 @@
 ########################### User defined variables ###########################
 NAME ?= main
-DEBUGFLAGS ?= -debug
+DEBUGFLAGS ?=
 
 PM_FILE_PATH ?=
 PM_SIZE ?=
@@ -216,14 +216,14 @@ $(NAME).ppdg: $(NAME).trace.split
 
 # Get BB list for each trace
 $(NAME).trace.split.bb: $(NAME).trace.split
-	mkdir $(NAME).trace.split.bb
+	mkdir -p $(NAME).trace.split.bb
 	$(GIRI_BIN_DIR)/tracesplitbb \
 	$(NAME).trace.split \
 	$(NAME).trace.split.bb
 
 # Execute the executable to collect the trace
 $(NAME).trace.split: $(NAME).trace
-	mkdir $(NAME).trace.split
+	mkdir -p $(NAME).trace.split
 	$(GIRI_BIN_DIR)/tracesplit \
 	$(NAME).trace \
 	$(EXT_TRACING_FUNC_FILE) \
