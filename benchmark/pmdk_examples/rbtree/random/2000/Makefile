@@ -15,7 +15,7 @@ PM_ADDR = $(PMEM_MMAP_HINT)
 REPLAY_OUT_PATH = replay-output
 OP_PATH = op_file.txt
 
-CRASH_TARGET = 2-443712-443703
+#CRASH_TARGET = 2-443712-443703
 
 TRACE_EXE = ../../main/$(NAME).trace.exe
 EXE = ../../main/$(NAME).exe
