@@ -20,7 +20,7 @@ def run(app_name, path):
     os.system('make main.trace.split.bb >/dev/null')
     os.system('make main.pmtrace >/dev/null 2>/dev/null')
     t1 = datetime.datetime.now()
-    f.write('compile: ' + str(t1-t0) + '\n')
+    f.write('traces: ' + str(t1-t0) + '\n')
 
     t0 = datetime.datetime.now()
     os.system('make main.ppdg >/dev/null 2>/dev/null')
